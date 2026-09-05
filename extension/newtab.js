@@ -88,6 +88,7 @@ async function init() {
   if (inExtension) {
     const ageMin = (Date.now() - state.fetchedAt) / 60000;
     if (ageMin > CONFIG.STALE_AFTER_MINUTES) {
+      pullBoard();  // read Supabase right now, do not wait for the worker
       chrome.runtime.sendMessage({ type: 'refresh-feed' }).catch(() => {});
     }
     chrome.storage.onChanged.addListener((changes) => {
@@ -740,6 +741,31 @@ function sheetMsg(text, kind) {
 /* ------------------------------------------------------------------
    Supabase REST — no SDK, just fetch
 ------------------------------------------------------------------ */
+
+// Pull the live board from the database and repaint. This is what makes an
+// approved post show up on the very next new tab.
+async function pullBoard() {
+  if (NEEDS_SETUP) return;
+  try {
+    const res = await fetch(`${CONFIG.SUPABASE_URL}/rest/v1/board?select=*`, {
+      cache: 'no-cache',
+      headers: {
+        apikey: CONFIG.SUPABASE_ANON_KEY,
+        Authorization: `Bearer ${CONFIG.SUPABASE_ANON_KEY}`
+      }
+    });
+    if (!res.ok) return;
+    const rows = await res.json();
+    if (!Array.isArray(rows)) return;
+    state.posts = rows;
+    state.fetchedAt = Date.now();
+    await store.set({
+      feed: { generatedAt: new Date().toISOString(), count: rows.length, posts: rows },
+      feedFetchedAt: state.fetchedAt
+    });
+    render({ firstPaint: false });
+  } catch { /* keep whatever is cached */ }
+}
 
 function headers() {
   return {

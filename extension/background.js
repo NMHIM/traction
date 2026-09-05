@@ -25,13 +25,22 @@ chrome.runtime.onMessage.addListener((msg, _sender, respond) => {
 });
 
 async function refresh() {
+  // Read the board straight from Supabase. Approving a post makes it appear
+  // here immediately — there is no build step or CDN cache in between.
   try {
-    const res = await fetch(CONFIG.FEED_URL, { cache: 'no-cache' });
+    const res = await fetch(`${CONFIG.SUPABASE_URL}/rest/v1/board?select=*`, {
+      cache: 'no-cache',
+      headers: {
+        apikey: CONFIG.SUPABASE_ANON_KEY,
+        Authorization: `Bearer ${CONFIG.SUPABASE_ANON_KEY}`
+      }
+    });
     if (!res.ok) return;
-    const feed = await res.json();
-    if (!Array.isArray(feed?.posts)) return;
+    const rows = await res.json();
+    if (!Array.isArray(rows)) return;
+    const feed = { generatedAt: new Date().toISOString(), count: rows.length, posts: rows };
     await chrome.storage.local.set({ feed, feedFetchedAt: Date.now() });
   } catch {
-    // Offline or CDN blip. The cached board stays on screen; we try again next hour.
+    // Offline or Supabase blip. The cached board stays on screen; we retry shortly.
   }
 }
