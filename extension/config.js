@@ -8,8 +8,8 @@ export const CONFIG = {
   SUPABASE_URL: 'https://rwtzwomzyzhoxaxdlfft.supabase.co',
   SUPABASE_ANON_KEY: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ3dHp3b216eXpob3hheGRsZmZ0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg0MzAxMjcsImV4cCI6MjEwNDAwNjEyN30.s9lBjpYUPOCjGJ8rjDYDK4SiTz5N7_nUoFaIb2PbMx0',
 
-  REFRESH_MINUTES: 60,      // how often the background worker pulls the feed
-  STALE_AFTER_MINUTES: 120, // older than this and we nudge a refresh on open
+  REFRESH_MINUTES: 15,      // how often the background worker pulls the feed
+  STALE_AFTER_MINUTES: 5, // older than this and we nudge a refresh on open
   MAX_POSTS_RENDERED: 60,
   POSTS_PER_DAY: 2          // client-side guard; the real limit lives in Postgres
 };
