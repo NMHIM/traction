@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" style="background:#0D1E2B">
+<head>
+<meta charset="utf-8">
+<title>New tab</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="paper" aria-hidden="true"></div>
+
+<header class="masthead">
+  <div class="brand">
+    <span class="brand-mark" aria-hidden="true"></span>
+    <h1>Traction</h1>
+  </div>
+  <div class="masthead-right">
+    <p class="tally" id="tally"></p>
+    <button class="post-open" id="post-open" type="button">Post a milestone</button>
+  </div>
+</header>
+
+<main class="board">
+
+  <!-- ---------- Composer ---------- -->
+  <section class="composer" id="composer" hidden aria-label="Post a milestone">
+    <div class="composer-types" role="radiogroup" aria-label="Milestone type" id="composer-types"></div>
+
+    <div class="composer-grid">
+      <label class="field">
+        <span>Startup</span>
+        <input id="f-startup" type="text" maxlength="40" autocomplete="off" placeholder="Kettle">
+      </label>
+      <label class="field field-value">
+        <span>Number, if there is one</span>
+        <input id="f-value" type="text" maxlength="18" autocomplete="off" placeholder="EUR 40">
+      </label>
+    </div>
+
+    <label class="field">
+      <span>What happened</span>
+      <textarea id="f-note" maxlength="180" rows="2" placeholder="Six months of nights and someone finally paid."></textarea>
+    </label>
+
+    <!-- Everything below is optional. Collapsed so the quick post stays quick. -->
+    <button class="more-toggle" id="more-toggle" type="button" aria-expanded="false">
+      Add your startup profile
+      <span class="more-hint">optional, shows when someone opens your card</span>
+    </button>
+
+    <div class="composer-more" id="composer-more" hidden>
+      <label class="field">
+        <span>What you're building</span>
+        <textarea id="f-about" maxlength="600" rows="3" placeholder="A kettle that texts you when the water is ready. Sounds silly, sells well."></textarea>
+      </label>
+
+      <div class="composer-grid">
+        <label class="field">
+          <span>Stage</span>
+          <select id="f-stage">
+            <option value="">Not saying</option>
+            <option value="idea">Idea</option>
+            <option value="building">Building</option>
+            <option value="live">Live</option>
+            <option value="revenue">Making revenue</option>
+            <option value="funded">Funded</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Website</span>
+          <input id="f-website" type="url" maxlength="200" autocomplete="off" placeholder="https://">
+        </label>
+      </div>
+
+      <div class="composer-grid">
+        <label class="field">
+          <span>Social</span>
+          <input id="f-social" type="url" maxlength="200" autocomplete="off" placeholder="https://x.com/...">
+        </label>
+        <label class="field">
+          <span>Your LinkedIn</span>
+          <input id="f-linkedin" type="url" maxlength="200" autocomplete="off" placeholder="https://linkedin.com/in/...">
+        </label>
+      </div>
+
+      <fieldset class="field looking">
+        <legend>Open to</legend>
+        <div class="looking-tags" id="looking-tags"></div>
+      </fieldset>
+    </div>
+
+    <div class="composer-grid">
+      <label class="field">
+        <span>Link for this milestone</span>
+        <input id="f-link" type="url" maxlength="200" autocomplete="off" placeholder="https://">
+      </label>
+      <label class="field">
+        <span>Your name</span>
+        <input id="f-author" type="text" maxlength="24" autocomplete="off" placeholder="ana">
+      </label>
+    </div>
+
+    <div class="composer-foot">
+      <p class="composer-msg" id="composer-msg" role="status"></p>
+      <div class="composer-actions">
+        <button class="btn-quiet" id="post-cancel" type="button">Cancel</button>
+        <button class="btn-solid" id="post-submit" type="button">Post milestone</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="filters" id="filters" hidden></div>
+
+  <ol class="grid" id="grid"></ol>
+
+  <p class="board-empty" id="board-empty" hidden></p>
+
+  <footer class="board-foot">
+    <div class="foot-views">
+      <button class="btn-quiet" id="view-saved" type="button" aria-pressed="false">Saved</button>
+      <button class="btn-quiet" id="view-mine" type="button" aria-pressed="false">Mine</button>
+    </div>
+    <span class="freshness" id="freshness"></span>
+  </footer>
+</main>
+
+<!-- ---------- Detail panel ---------- -->
+<div class="sheet-veil" id="sheet-veil" hidden></div>
+<aside class="sheet" id="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="sheet-startup">
+  <button class="sheet-close" id="sheet-close" type="button" aria-label="Close">Close</button>
+  <div class="sheet-body" id="sheet-body"></div>
+</aside>
+
+<script type="module" src="newtab.js"></script>
+</body>
+</html>
