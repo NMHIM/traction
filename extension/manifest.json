@@ -14,10 +14,10 @@
     "storage",
     "alarms"
   ],
-  "host_permissions": [
-    "https://cdn.jsdelivr.net/*"
-    "https://raw.githubusercontent.com/*",
-    "https://*.supabase.co/*"
+"host_permissions": [
+  "https://cdn.jsdelivr.net/*",
+  "https://raw.githubusercontent.com/*",
+  "https://*.supabase.co/*"
   ],
   "icons": {
     "16": "icons/icon-16.png",
