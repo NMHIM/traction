@@ -11,7 +11,7 @@ export const CONFIG = {
   REFRESH_MINUTES: 15,      // how often the background worker pulls the feed
   STALE_AFTER_MINUTES: 5, // older than this and we nudge a refresh on open
   MAX_POSTS_RENDERED: 60,
-  POSTS_PER_DAY: 2          // client-side guard; the real limit lives in Postgres
+  POSTS_PER_DAY: 20          // client-side guard; the real limit lives in Postgres
 };
 
 // Milestone types double as the colour system. Order runs from "just shipped"
