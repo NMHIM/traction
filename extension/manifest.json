@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Traction \u2014 founder milestones on every new tab",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A board of what other founders shipped, sold and raised, on every new tab. Post your own milestone in ten seconds.",
   "chrome_url_overrides": {
     "newtab": "newtab.html"
