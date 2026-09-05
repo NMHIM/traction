@@ -2,7 +2,7 @@
 
 export const CONFIG = {
   // Where the extension READS the feed. Static file on a CDN — free and unmetered.
-  FEED_URL: FEED_URL: 'https://raw.githubusercontent.com/NMHIM/traction/main/feed/feed.json',
+  FEED_URL: 'https://raw.githubusercontent.com/NMHIM/traction/main/feed/feed.json',
 
   // Where the extension WRITES (new posts, edits, cheers).
   SUPABASE_URL: 'https://rwtzwomzyzhoxaxdlfft.supabase.co',
