@@ -1,7 +1,43 @@
 {
-  "generatedAt": "2026-09-05T18:45:16.539Z",
-  "count": 2,
+  "generatedAt": "2026-09-05T20:54:35.013Z",
+  "count": 4,
   "posts": [
+    {
+      "id": "b696f7b8-f9fd-4938-82e7-4068ba6ff2d1",
+      "at": "2026-09-05T20:54:05.764693+00:00",
+      "type": "revenue",
+      "startup": "PicuBooth",
+      "value": "5k per month",
+      "note": "Wrapped up my time on PicuBooth. Built real partnerships, did a market entry into Germany, made money doing it. Learned more than I expected. Ready for what's next.",
+      "about": "PicuBooth — a photo booth events business, run with a business partner. Landed real partnerships and expanded into the German market from scratch. It was a genuine business, not a side project: revenue, contracts, the whole operational reality of running something on the ground. I'm stepping back now, but the market-entry playbook and the partnership relationships were worth every difficult month.",
+      "stage": "revenue",
+      "looking_for": null,
+      "link": null,
+      "website": "https://picubooth.com/",
+      "social": null,
+      "linkedin": "https://www.linkedin.com/in/iona-dzidzishvili-0a1605180",
+      "author": "Iona",
+      "cheers": 0
+    },
+    {
+      "id": "4597d1cd-579a-4bca-afa1-efe56bda73f7",
+      "at": "2026-09-05T20:50:08.748917+00:00",
+      "type": "launch",
+      "startup": "Software Sovereignty Checker",
+      "value": null,
+      "note": "Live on the Chrome Web Store. Scores any site's data ethics and shows you GDPR-friendly European alternatives to the tools you're already using.",
+      "about": "A data-ethics score for any website you visit, plus European alternatives to the SaaS tools you rely on. Built after digging into the EU's push for tech sovereignty and what countries like Germany and France are doing to reduce dependence on non-European infrastructure. Runs entirely locally — nothing you browse gets sent anywhere.",
+      "stage": "live",
+      "looking_for": [
+        "feedback"
+      ],
+      "link": null,
+      "website": "https://sovereignty-checker.eu",
+      "social": null,
+      "linkedin": "https://www.linkedin.com/in/iona-dzidzishvili-0a1605180",
+      "author": "Iona",
+      "cheers": 0
+    },
     {
       "id": "95268ba1-8535-4c85-8ecf-9d3cca803cdd",
       "at": "2026-09-05T18:09:15.549524+00:00",
