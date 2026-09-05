@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-09-05T16:37:50.656Z",
+  "generatedAt": "2026-09-05T18:45:16.539Z",
   "count": 2,
   "posts": [
     {
-      "id": "ee4ec8be-4c64-4aa8-9feb-3b1a8e0b8bf6",
-      "at": "2026-09-05T16:35:16.189732+00:00",
+      "id": "95268ba1-8535-4c85-8ecf-9d3cca803cdd",
+      "at": "2026-09-05T18:09:15.549524+00:00",
       "type": "shipped",
-      "startup": "ssss",
+      "startup": "CrowdWave",
       "value": null,
-      "note": "ssss",
-      "about": null,
-      "stage": null,
+      "note": "Community-powered shipping — senders get matched with travelers already heading their way.",
+      "about": "CrowdWave connects people who need to send a package with travelers who have spare space on a route they're already taking. Senders post package details and destination, travelers post their route, and a matching algorithm pairs them in real time. Senders save up to 70% versus traditional couriers, travelers earn on each delivery, and the shipment produces no extra vehicle trip. Trust runs on government-ID verification, two-way ratings, encrypted payments, and real-time tracking with photo proof of delivery. The app is currently in testing on iOS and Android — not yet published.",
+      "stage": "building",
       "looking_for": null,
       "link": null,
-      "website": null,
+      "website": "https://crowdwave.eu/",
       "social": null,
-      "linkedin": null,
-      "author": null,
-      "cheers": 0
+      "linkedin": "https://www.linkedin.com/in/iona-dzidzishvili-0a1605180",
+      "author": "Iona",
+      "cheers": 1
     },
     {
       "id": "01cf1d66-6935-467b-82c0-d06c42b83f53",
@@ -31,10 +31,10 @@
       "looking_for": [
         "cofounder"
       ],
-      "link": "https://www.linkedin.com/in/iona-dzidzishvili-0a1605180",
+      "link": null,
       "website": null,
       "social": null,
-      "linkedin": null,
+      "linkedin": "https://www.linkedin.com/in/iona-dzidzishvili-0a1605180",
       "author": "Iona",
       "cheers": 1
     }
